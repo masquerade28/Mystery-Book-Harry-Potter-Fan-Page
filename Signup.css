@@ -1,0 +1,265 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+        
+body
+{
+    background-color: black;
+    background-size: cover;
+    opacity: 0.8;
+    
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar-lists
+{
+    list-style: none;
+    margin-right: 1cm;
+    display: flex;
+    gap: 2.4rem;
+    font-family:  cursive;
+    font-size: 0.4cm;
+    color: rgb(215, 215, 215);
+}
+.navbar-lists a:hover 
+{
+    width: 110%;
+    height: auto;
+    margin: -3%;
+    border-bottom: 2.5px solid rgb(156, 156, 16);
+}
+
+.navbar-link:link,
+.navbar-link:visited
+{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(215, 215, 215);
+}
+
+footer
+{
+    font-family: cursive;
+    color: #ffffff;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    text-align: center;
+}
+
+.main
+{
+    margin-top: -5%;
+}
+.box1
+{
+    width: 600px; 
+    float: left;
+    margin-left: 10%;
+}
+
+.box2
+{
+    position: relative;
+    margin-top: 95px;
+    margin-bottom: 50px;
+    margin-left: 22cm; 
+    /*margin-right: 14cm; */
+    width: 500px;
+    height: 620px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.box2::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 540px;
+    background: linear-gradient(to bottom, transparent, rgb(156, 156, 16), rgba(250, 250,250,0));
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite;
+}
+
+.box2::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 540px;
+    background: linear-gradient(to bottom, transparent, rgb(156, 156, 16), rgba(250, 250,250,0));
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.form
+{
+    position: absolute;
+    inset: 1.5px;
+    border-radius: 8px;
+    background: black;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h1
+{
+    color: rgb(156, 156, 16);
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.inputBox
+{
+    position: relative;
+    width: 400px;
+    margin-top: 0.5cm;
+}
+
+.inputBox input
+{
+    position: relative;
+    width: 415px;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #1c1c1c;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox span
+{
+    position: absolute;
+    left: 0;
+    top: 4px;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: rgb(156, 156, 16);
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: rgb(156, 156, 16);
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(156, 156, 16);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 44px;
+}
+
+.links
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a
+{
+    margin: 30px 0px;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover,
+.link a:nth-child(2)
+{
+    color: rgb(156, 156, 16);
+}
+
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    background: rgb(156, 156, 16);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 1cm;
+    margin-left: 4cm;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 1;
+}
+.login
+{
+    text-align: center;
+    margin-top: 0.5cm;
+}
+
+.login a
+{
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.login a:hover,
+.login a:nth-child(2)
+{
+    color: rgb(156, 156, 16);
+}
+
+input[type="submit"]:active
+{opacity: 0.8;}
+
+audio
+{display: none;}
