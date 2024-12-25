@@ -88,13 +88,10 @@ footer
     height: 15cm;
     width: 15cm;
     position: fixed;
-    top: 10%;
     left: 55%;
-    bottom: 15%;
+    bottom: 5%;
     opacity: 0.3;
 }
 
 audio
 {display: none;}
-
-
